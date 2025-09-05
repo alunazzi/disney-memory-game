@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@font-face {
+  font-family: 'Waltograph';
+  src: url('../fonts/waltograph.regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* Typography */
+  --font-family-nunito: "Nunito", sans-serif;
+  --font-family-disney: "Waltograph", cursive;
+  --font-size-body: 16px;
+  --font-size-h1: 5rem;
+  --font-size-label: 1.5rem;
+  --font-size-button: 1.25rem;
+
+  /* Layout */
+  --padding-base: 1.5rem;
+  --border-radius: 0.5rem;
+  --border-radius-inner: 0.25rem;
+  --size-05: 0.5rem;
+  --size-1: 1rem;
+  --size-2: 2rem;
+  --size-3: 3rem;
+
+  /* Colors */
+  --color-lightpink: hsla(288, 100%, 92%, 1);
+  --color-pink: #ff99bb;
+  --color-lightblue: #00b2dd;
+  --color-verylightblue: #62d1ec;
+  --color-border-match: #63bb67;
+  --color-border-wrong: #ff6060;
+  --color-pinker: #ff3b7e;
+  --color-modal-bg: rgba(0, 0, 0, 0.6);
+  --color-white: white;
+  --color-card-info-bg: rgba(255, 255, 255, 0.8);
+
+  /* Gradients BackGround*/
+  --gradient-yellow: radial-gradient(at 23% 26%, hsla(47, 100%, 73%, 1) 0px, transparent 60%);
+  --gradient-babyblue: radial-gradient(at 70% 38%, hsla(189, 100%, 76%, 1) 0px, transparent 60%);
+  --gradient-pink: radial-gradient(at 47% 81%, hsla(340, 100%, 80%, 1) 0px, transparent 60%);
+
+  /* Gradients Text*/
+  --gradient-yellow-full: #edc332;
+  --gradient-babyblue-full: #00bedf;
+  --gradient-pink-full: #ff6095;
+
+  /* Card */
+  --card-aspect-ratio: 3 / 4;
+  --card-border-width: 0.25rem;
+  --card-transition: transform 0.6s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-nunito);
+  font-size: var(--font-size-body);
+}
+
+body {
+  background-color: var(--color-lightpink);
+  background-image: var(--gradient-yellow), var(--gradient-babyblue), var(--gradient-pink);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: var(--padding-base);
+  text-align: center;
+  min-height: 100dvh;
+}
+
+h1 {
+  color: var(--color-white);
+  font-family: var(--font-family-disney);
+  font-size: var(--font-size-h1);
+  margin-bottom: var(--size-2);
+  background: var(--color-pink);
+  background: linear-gradient(90deg, var(--gradient-pink-full) 10%, var(--gradient-yellow-full)50%, var(--gradient-babyblue-full) 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  filter: brightness(85%) contrast(150%);
+}
+
+header {
+  margin-bottom: var(--size-1);
+}
+
+label {
+  font-size: var(--font-size-label);
+  font-weight: 900;
+  color: var(--color-pinker);
+}
+
+.player-selection-label, .difficulty-selection-label {
+  margin-bottom: var(--size-05);
+}
+
+.player-selection, .difficulty-selection {
+  margin-bottom: var(--size-2)!important;
+}
+
+.controls {
+  margin: 10px 0;
+}
+
+.controls button {
+  font-family: var(--font-family-nunito);
+  font-size: var(--font-size-button);
+  font-weight: 800;
+  color: var(--color-lightblue);
+  margin: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  background: var(--color-white);
+  border: 1px solid var(--color-lightblue);
+  border-radius: var(--border-radius);
+  transition: background 0.3s ease;
+}
+
+.controls button:hover {
+  color: var(--color-white);
+  background: var(--color-lightblue);
+}
+
+.active-button {
+  color: var(--color-white)!important;
+  background: var(--color-lightblue)!important;
+}
+
+.player-selection-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.player-selection-buttons button {
+  display: inline-block;
+  height: var(--size-3);
+  width: var(--size-3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+#timer {
+  margin: 0px 20px;
+}
+
+.single-stat {
+  font-size: var(--font-size-label);
+  font-weight: 900;
+  color: var(--color-pinker);
+  white-space: nowrap;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.card {
+  width: 100%;
+  aspect-ratio: var(--card-aspect-ratio);
+  perspective: 1000px;
+  position: relative;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: var(--card-transition);
+  transform-style: preserve-3d;
+  border: var(--card-border-width) solid var(--color-lightblue);
+  border-radius: var(--border-radius);
+}
+
+.card-inner:hover {
+  border-color: var(--color-verylightblue);
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-inner.matched {
+  border-color: var(--color-border-match);
+}
+
+.card-inner.wrong {
+  border-color: var(--color-border-wrong);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card-back {
+  background-image: url('../IMG/Card_Back.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--border-radius-inner);
+}
+
+.card-back-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-inner);
+}
+
+.card-front {
+  transform: rotateY(180deg);
+  background-color: var(--color-white);
+  background-size: cover;
+  background-position: center calc(50% + 3rem);
+  position: relative;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  border-radius: var(--border-radius-inner);
+  aspect-ratio: 3 / 4;
+}
+
+.card-info {
+  background-color: var(--color-card-info-bg);
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.card-info strong {
+  display: block;
+  font-weight: bold;
+}
+
+.card-player {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: var(--color-white);
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: var(--border-radius-inner);
+  font-weight: bold;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-modal-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  padding: var(--size-2);
+}
+
+.modal-content {
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: var(--size-2);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 178, 221, 0.3);
+  border: var(--card-border-width) solid var(--color-lightblue);
+  animation: popIn 0.4s ease-out;
+}
+
+.modal-content h2 {
+  font-size: var(--size-2);
+  font-weight: 900;
+  margin-bottom: var(--size-1);
+  background: linear-gradient(90deg, var(--gradient-pink-full), var(--gradient-yellow-full), var(--gradient-babyblue-full));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  filter: brightness(85%) contrast(150%);
+}
+
+.modal-content p {
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  color: var(--color-lightblue);
+  margin-bottom: var(--size-2);
+}
+
+.modal-content button {
+  font-family: var(--font-family-nunito);
+  font-size: var(--font-size-button);
+  font-weight: 800;
+  color: var(--color-lightblue);
+  background: var(--color-white);
+  border: 1px solid var(--color-lightblue);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal-content button:hover {
+  color: var(--color-white);
+  background: var(--color-lightblue);
+}
+
+/* Animation */
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.hidden {
+  display: none;
+}

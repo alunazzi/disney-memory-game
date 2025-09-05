@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disney Memory</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Disney Memory</h1>
+    <div class="controls">
+      <div class="player-selection">
+        <div class="player-selection-label">
+          <label>Players:</label>
+        </div>
+        <div class="player-selection-buttons">
+          <button class="active-button" data-value="1" onclick="setPlayers(this)">1</button>
+          <button data-value="2" onclick="setPlayers(this)">2</button>
+          <button data-value="3" onclick="setPlayers(this)">3</button>
+          <button data-value="4" onclick="setPlayers(this)">4</button>
+        </div>
+      </div>
+      <div class="difficulty-selection">
+        <div class="difficulty-selection-label">
+          <label>Difficulty:</label>
+        </div>
+        <div class="difficulty-selection-buttons">
+          <button class="active-button" data-value="10" onclick="setDifficulty(this)">Easy</button>
+          <button data-value="16" onclick="setDifficulty(this)">Medium</button>
+          <button data-value="25" onclick="setDifficulty(this)">Hard</button>
+        </div>
+      </div>
+    </div>
+    <div class="stats">
+      <span class="single-stat" id="moves">Moves: 0</span>
+      <span class="single-stat" id="timer">Time: 0s</span>
+      <span class="single-stat" id="turn">Player 1's Turn</span>
+    </div>
+  </header>
+
+  <main>
+    <div id="game-board" class="grid"></div>
+  </main>
+
+  <!-- Winner Modal -->
+  <div id="winner-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="winner-title"></h2>
+      <p id="winner-details"></p>
+      <button onclick="resetGame()">Play Again</button>
+    </div>
+  </div>
+
+  <script src="JS/main.js"></script>
+</body>
+</html>
