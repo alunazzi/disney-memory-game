@@ -233,7 +233,7 @@ label {
   transform: rotateY(180deg);
   background-color: var(--color-white);
   background-size: cover;
-  background-position: center calc(50% + 3rem);
+  /* background-position: center calc(50% + 3rem); */
   position: relative;
   background-repeat: no-repeat;
   box-sizing: border-box;
@@ -344,3 +344,4 @@ label {
 .hidden {
   display: none;
 }
+
