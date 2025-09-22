@@ -20,30 +20,30 @@ const playerColors = {
 
 // Character pool (name, movie, image filename)
 const characters = [
-  { name: 'Alice', movie: 'Alice in Wonderland', img: '../IMG/Alice.webp' },
-  { name: 'Snow White', movie: 'Snow White', img: '../IMG/SnowWhite.webp' },
-  { name: 'Cinderella', movie: 'Cinderella', img: '../IMG/Cinderella.webp' },
-  { name: 'Aurora', movie: 'Sleeping Beauty', img: '../IMG/Aurora.webp' },
-  { name: 'Ariel', movie: 'The Little Mermaid', img: '../IMG/Ariel.webp' },
-  { name: 'Belle', movie: 'Beauty and the Beast', img: '../IMG/Belle.webp' },
-  { name: 'Jasmine', movie: 'Aladdin', img: '../IMG/Jasmine.webp' },
-  { name: 'Pocahontas', movie: 'Pocahontas', img: '../IMG/Pocahontas.webp' },
-  { name: 'Mulan', movie: 'Mulan', img: '../IMG/Mulan.webp' },
-  { name: 'Tiana', movie: 'Princess and the Frog', img: '../IMG/Tiana.webp' },
-  { name: 'Rapunzel', movie: 'Tangled', img: '../IMG/Rapunzel.webp' },
-  { name: 'Merida', movie: 'Brave', img: '../IMG/Merida.webp' },
-  { name: 'Moana', movie: 'Moana', img: '../IMG/Moana.webp' },
-  { name: 'Raya', movie: 'Raya and the Last Dragon', img: '../IMG/Raya.webp' },
-  { name: 'Elsa', movie: 'Frozen', img: '../IMG/Elsa.webp' },
-  { name: 'Anna', movie: 'Frozen', img: '../IMG/Anna.webp' },
-  { name: 'Mirabel', movie: 'Encanto', img: '../IMG/Mirabel.webp' },
-  { name: 'Vanellope', movie: 'Wreck-It Ralph', img: '../IMG/Vanellope.webp' },
-  { name: 'Megara', movie: 'Hercules', img: '../IMG/Megara.webp' },
-  { name: 'Esmeralda', movie: 'Hunchback of Notre Dame', img: '../IMG/Esmeralda.webp' },
-  { name: 'Kida', movie: 'Atlantis', img: '../IMG/Kida.webp' },
-  { name: 'Jane', movie: 'Tarzan', img: '../IMG/Jane.webp' },
-  { name: 'Giselle', movie: 'Enchanted', img: '../IMG/Giselle.webp' },
-  { name: 'Wendy', movie: 'Peter Pan', img: '../IMG/Wendy.webp' }
+  { name: 'Eleonora', movie: 'Principessina Eleonora', img: '../IMG/Eleonora.png' },
+  { name: 'Snow White', movie: 'Snow White', img: '../IMG/SnowWhite.png' },
+  { name: 'Cinderella', movie: 'Cinderella', img: '../IMG/Cinderella.png' },
+  { name: 'Aurora', movie: 'Sleeping Beauty', img: '../IMG/Aurora.png' },
+  { name: 'Ariel', movie: 'The Little Mermaid', img: '../IMG/Ariel.png' },
+  { name: 'Belle', movie: 'Beauty and the Beast', img: '../IMG/Belle.png' },
+  { name: 'Jasmine', movie: 'Aladdin', img: '../IMG/Jasmine.png' },
+  { name: 'Pocahontas', movie: 'Pocahontas', img: '../IMG/Pocahontas.png' },
+  { name: 'Mulan', movie: 'Mulan', img: '../IMG/Mulan.png' },
+  { name: 'Tiana', movie: 'Princess and the Frog', img: '../IMG/Tiana.png' },
+  { name: 'Rapunzel', movie: 'Tangled', img: '../IMG/Rapunzel.png' },
+  { name: 'Merida', movie: 'Brave', img: '../IMG/Merida.png' },
+  { name: 'Moana', movie: 'Moana', img: '../IMG/Moana.png' },
+  { name: 'Raya', movie: 'Raya and the Last Dragon', img: '../IMG/Raya.png' },
+  { name: 'Elsa', movie: 'Frozen', img: '../IMG/Elsa.png' },
+  { name: 'Anna', movie: 'Frozen', img: '../IMG/Anna.png' },
+  { name: 'Mirabel', movie: 'Encanto', img: '../IMG/Mirabel.png' },
+  { name: 'Vanellope', movie: 'Wreck-It Ralph', img: '../IMG/Vanellope.png' },
+  { name: 'Megara', movie: 'Hercules', img: '../IMG/Megara.png' },
+  { name: 'Esmeralda', movie: 'Hunchback of Notre Dame', img: '../IMG/Esmeralda.png' },
+  { name: 'Kida', movie: 'Atlantis', img: '../IMG/Kida.png' },
+  { name: 'Jane', movie: 'Tarzan', img: '../IMG/Jane.png' },
+  { name: 'Giselle', movie: 'Enchanted', img: '../IMG/Giselle.png' },
+  { name: 'Wendy', movie: 'Peter Pan', img: '../IMG/Wendy.png' }
 ];
 
 // Set number of players
@@ -242,3 +242,4 @@ function showWinner() {
 
 // Start default game
 resetGame();
+
